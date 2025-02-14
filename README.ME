@@ -1,6 +1,38 @@
-Runnig server: 
+Go HTTP Server Practice Project
+
+About This Project
+
+This is not a real project; it is intended for practicing programming in Go. While building it, no effort was made to maintain clean code or structure various parts properly. The main goal was to follow along with a Go HTTP servers course and get hands-on experience with Go programming.
+
+Running the Server
+
+To build and run the server, execute the following commands:
+
 go build -o out && ./out
 
-migrations:
+Database Migrations
+
+This project uses goose for database migrations. To apply or rollback migrations, use the following commands:
+
+Apply Migrations:
+
 goose postgres <connection_string> up
+
+Rollback Migrations:
+
 goose postgres <connection_string> down
+
+Notes
+
+Ensure you have Go installed on your system.
+
+Install goose if you haven't already by running:
+
+go install github.com/pressly/goose/v3/cmd/goose@latest
+
+Replace <connection_string> with your actual PostgreSQL connection string.
+
+License
+
+This project is for educational purposes only and is not meant for production use.
+
