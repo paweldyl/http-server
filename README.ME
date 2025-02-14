@@ -1,0 +1,6 @@
+Runnig server: 
+go build -o out && ./out
+
+migrations:
+goose postgres <connection_string> up
+goose postgres <connection_string> down
